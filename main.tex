@@ -1,4 +1,21 @@
-\documentclass{minimal}
+\documentclass[a4paper]{article}
+
+% code for graph paper background - from https://tex.stackexchange.com/a/311407
+
+\def\mygraphpaper{%
+  \begin{tikzpicture}
+    \draw[line width=.4pt,draw=black!30] (0,0) grid[step=1mm] (\paperwidth,\paperheight);
+    \draw[line width=.4pt,draw=red!50] (0,0) grid[step=1cm] (\paperwidth,\paperheight);
+  \end{tikzpicture}%
+}
+\usepackage{tikz}
+\usepackage{background}
+\backgroundsetup{
+  angle=0,
+  contents=\mygraphpaper,
+  color=black,
+  scale=1,
+}
 
 % code to make organic highlights - from https://tex.stackexchange.com/a/6029
 \usepackage{soul}
@@ -102,6 +119,8 @@
 \usepackage{marvosym} % try \bat, \heart ...
 
 \begin{document}
+\huge %font size
+%some tests
   Font test 1 (the default)
   
   {\myfont Font test 2}
