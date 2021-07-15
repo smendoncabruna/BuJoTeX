@@ -1,4 +1,6 @@
-\documentclass[a4paper]{article}
+\documentclass[a5paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb} %for the items
 
 % code for graph paper background - from https://tex.stackexchange.com/a/311407
 
@@ -116,19 +118,31 @@
 \newfontfamily\myfont{QTArtiston}
 
 % Some cute symbols
-\usepackage{marvosym} % try \bat, \heart ...
+\usepackage{marvosym} % try \Bat, \Heart ...
 
+%Pre-settings
+
+\newenvironment{myitems}
+    {\renewcommand{\labelitemi}{\highlight[orange]{\Heart}}
+    \renewcommand\labelitemii{\highlight[pink]{$\square$}}
+    \begin{itemize}
+        \item
+    }
+    { \end{itemize}
+    }
+    
+\newenvironment{mybox}
+    {\begin{tabular}{|p{0.7\textwidth}|}
+    \hline
+    \begin{center}\highlight[white]{\Heart}\end{center}\\
+    }
+    { 
+    \\
+    \begin{center}\highlight[white]{\Heart}\end{center}
+    \\\\ \hline
+    \end{tabular}
+    }
+    
 \begin{document}
-\huge %font size
-%some tests
-  Font test 1 (the default)
-  
-  {\myfont Font test 2}
-  
-  \highlight[draw=black]{highlight test 1}
-  
-  \highlight[pink]{highlight test 2}
-
-    \Bat
-    \Heart
+\input{page_model}
 \end{document}
