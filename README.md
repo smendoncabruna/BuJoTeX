@@ -13,7 +13,7 @@ Here is an application: create headers for Notion, for a collage look :)
     <img src="Notion_capture.png" style="width:500px;">	
 </figure>
 
-Enjoy and let me know if you have any ideas to make it cuter :) 
+Enjoy and let me know if you have any ideas to make it cuter!
 
 <figure>
     <img src="Captura2.jpg" style="width:500px;">	
